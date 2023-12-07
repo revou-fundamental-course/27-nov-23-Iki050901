@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
+    <!-- start favicon -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="asset/favicomatic/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="asset/favicomatic/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="asset/favicomatic/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="asset/favicomatic/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="asset/favicomatic/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="asset/favicomatic/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="asset/favicomatic/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="asset/favicomatic/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="asset/favicomatic/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="asset/favicomatic/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="asset/favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="asset/favicomatic/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="asset/favicomatic/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="asset/favicomatic/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="asset/favicomatic/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="asset/favicomatic/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="asset/favicomatic/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="asset/favicomatic/mstile-310x310.png" />
+    <!-- end favicon -->
+    <title>SEGIHITUNG</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="asset/logo.png" alt="Logo" width="220">
+            <h1>Kalkulator Luas Segitiga</h1>
+            <p>Cari tahu luas dan keliling segitiga dengan mudah dengan kalkulator segitiga gratis kami!</p>
+        </header>
+
+        <section id="penjelasanSegitiga">
+            <h2 class="center-text">Segitiga</h2>
+            <img src="asset/segitiga.png" alt="segitiga" width="170">
+            <p>Segitiga adalah sebuah poligon dengan tiga sisi dan tiga sudut. Beberapa properti segitiga:</p>
+            <ul>
+                <li>Semua sudut segitiga jumlahnya 180 derajat.</li>
+                <li>Sisi-sisi yang sejajar dengan basis disebut sebagai tinggi segitiga.</li>
+            </ul>
+            <br>
+            <div class="contoh-soal">
+                <h3>Contoh Soal 1:</h3>
+                <p>Jika sebuah segitiga memiliki alas (a) sepanjang 6 cm dan tinggi (t) sepanjang 8 cm,
+                    <br>hitunglah luas segitiga tersebut.</p>
+                <p><strong>Jawaban:</strong></p>
+                <p>Luas Segitiga = 1/2 . Alas . Tinggi</p>
+                <p class="tab1">= 1/2 . 6 . 8</p>
+                <p class="tab1"> = 24</p>
+            </div>
+            <br>
+            <div class="contoh-soal">
+                <h3>Contoh Soal 2:</h3>
+                <p>Sebuah segitiga memiliki panjang sisi-sisi sebagai berikut:</p>
+                <ul>
+                    <li>Sisi 1 (a) = 5 cm</li>
+                    <li>Sisi 2 (b) = 7 cm</li>
+                    <li>Sisi 3 (c) = 9 cm</li>
+                </ul>
+                <p>Hitunglah keliling segitiga tersebut.</p>
+                <p><strong>Jawaban:</strong></p>
+                <p>Keliling Segitiga = sisi 1 + sisi 2 + sisi 3</p>
+                <p class="tab2">= 5 + 7 + 9</p>
+                <p class="tab2">= 21 cm</p>
+            </div>
+        </section>
+
+
+
+
+        <section id="luasSegitiga">
+            <h2>Luas Segitiga</h2>
+            <p>Rumus Luas Segitiga yaitu: </p>
+            <p class="tab3"><strong>L = 1/2 * a * t</strong></p>
+            <p>Dimana :</p>
+            <p class="tab4">L = Luas</p>
+            <p class="tab4">a = alas</p>
+            <p class="tab4">t = tinggi</p>
+            <br>
+
+            <form id="luasForm">
+                <label for="alas">Alas:</label>
+                <input type="number" id="alas" required>
+
+                <label for="tinggi">Tinggi:</label>
+                <input type="number" id="tinggi" required>
+
+                <button type="button" onclick="hitungLuas()">Hitung Luas</button>
+                <button type="button" onclick="resetFormLuas()">Reset Luas</button>
+
+                <p id="hasilLuas"></p>
+                <div id="penjelasanLuas" class="penjelasan"></div>
+            </form>
+        </section>
+
+        <section id="kelilingSegitiga">
+            <h2>Keliling Segitiga</h2>
+            <p>Rumus Keliling Segitiga yaitu : </p>
+            <p class="tab3"><strong> K = S1 + S2 + S3 </strong></p>
+            <p>Dimana :</p>
+            <p class="tab4">k = Keliling</p>
+            <p class="tab4">S1 = Sisi A</p>
+            <p class="tab4">S1 = Sisi B</p>
+            <p class="tab4">S1 = Sisi C</p>
+            <br>
+            <form id="kelilingForm">
+                <label for="sisi1">Sisi 1:</label>
+                <input type="number" id="sisi1" required>
+
+                <label for="sisi2">Sisi 2:</label>
+                <input type="number" id="sisi2" required>
+
+                <label for="sisi3">Sisi 3:</label>
+                <input type="number" id="sisi3" required>
+
+                <button type="button" onclick="hitungKeliling()">Hitung Keliling</button>
+                <button type="button" onclick="resetFormKeliling()">Reset Keliling</button>
+
+                <p id="hasilKeliling"></p>
+                <div id="penjelasanKeliling" class="penjelasan"></div>
+            </form>
+        </section>
+
+
+        <div id="historiLuasContainer">
+            <h2>Histori Luas Segitiga</h2>
+            <table id="historiLuasTable" class="historiTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Input</th>
+                        <th>Hasil</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="historiKelilingContainer">
+            <h2>Histori Keliling Segitiga</h2>
+            <table id="historiKelilingTable" class="historiTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Input</th>
+                        <th>Hasil</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <a id="hubungiCS" href="https://www.linkedin.com/in/rizki-saputra05/" target="_blank" title="Hubungi Customer Service">
+            <img src="asset/customer servivce.png" alt="CS Icon" width="100" height="100">
+        </a>
+        
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p id="modal-content"></p>
+            </div>
+        </div>
+        
+
+        <div id="errorMessage">
+            <p id="errorText"></p>
+            <button onclick="hideErrorMessage()">OK</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Rizki Saputra. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

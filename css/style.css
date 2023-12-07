@@ -1,0 +1,325 @@
+body {
+    background-image: url('../asset/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #2980b9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 3px solid #ecf0f1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.penjelasan {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+#penjelasanSegitiga {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 3px solid #ccc;
+}
+
+#penjelasanSegitiga h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#penjelasanSegitiga img {
+    display: block;
+    margin: 10px auto;
+}
+
+.luasSegitiga,
+.kelilingSegitiga {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 3px solid #ccc;
+}
+
+#historiLuasContainer,
+#historiKelilingContainer {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 3px solid #ccc;
+}
+
+#hasilLuas,
+#hasilKeliling {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.tab1 {
+    text-indent: 130px;
+}
+
+.tab2 {
+    text-indent: 155px;
+}
+
+.tab3 {
+    text-align: center;
+}
+
+.tab4 {
+    text-indent: 50px;
+}
+
+#historiLuas,
+#historiKeliling {
+    margin-top: 10px;
+}
+
+#historiLuas h2,
+#historiKeliling h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#historiLuas div,
+#historiKeliling div {
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk tabel */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+/* Gaya untuk header tabel */
+th {
+    background-color: #f2f2f2;
+}
+
+.historiTable {
+    /* Gaya tambahan untuk tabel riwayat */
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 60%;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contoh-soal {
+    margin-bottom: 20px;
+}
+
+#errorMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#errorMessage p {
+    margin-bottom: 15px;
+}
+
+#errorMessage button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#errorMessage button:hover {
+    background-color: #2980b9;
+}
+
+#hubungiCS {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#hubungiCS:hover {
+    background-color: #2980b9;
+}
+
+#hubungiCS img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Gaya untuk tooltip */
+#hubungiCS:hover::before {
+    content: attr(title);
+    position: absolute;
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: -30px;
+    margin-left: -80px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+#hubungiCS:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    #hubungiCS {
+        bottom: 50px;
+        right: 30px;
+    }
+
+    #hubungiCS img {
+        width: 50px;
+        height: 50px;
+    }
+}
