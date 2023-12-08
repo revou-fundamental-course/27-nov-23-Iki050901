@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', sans-serif, cursive;
     font-size: 20px;
     margin: 0;
     display: flex;
